@@ -13,11 +13,9 @@ import java.io.InputStream;
  *
  * @author nowshad
  */
-
-//a class to test the pHash algorithm
-
-public class Testphash {
+public class StoreHashToFile {
     public static void main(String args[]) throws FileNotFoundException, Exception{
+        
         ImagePHash obj = new ImagePHash();
         
         

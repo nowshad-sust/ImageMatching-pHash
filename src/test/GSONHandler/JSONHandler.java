@@ -16,14 +16,12 @@ import java.io.IOException;
  *
  * @author nowshad
  */
+
 public class JSONHandler {
     
-     public static void toJSON(String outputDestination) {
+     public static void toJSON(JSONObject obj, String outputDestination) {
          
         //outputDestination = ".\\resources\\dataset\\dataset.json";
-	
-        //DataObject obj = new DataObject();
-        JSONObject obj = new JSONObject();
 	Gson gson = new Gson();
  
 	// convert java object to JSON format,
@@ -68,4 +66,5 @@ public class JSONHandler {
 	}
         return obj;
     }
+     
 }

@@ -1,0 +1,43 @@
+Plan of this project
+
+user view:
+    1. An image should be selected using file browser
+    2. Click a button to see the match result
+developer view:
+    1. a filepicker
+    2. a button to trigger the matching process
+    3. a label to view the result
+
+details:
+    dataset:
+    1. data means two type - images & hash strings
+    2. make a dataset making program
+        *file browser
+        *add button
+            #this will add the image to a directed resource folder
+            #this will add the image hash string to the bk-tree
+    matching:
+    1. generate given image's hash string
+    2. now run a search through the bk-tree
+    3. get the best match images properties from the dataset
+
+    
+    Database structure
+        values to store
+        1.source image path[saved]
+        2.source image value [which taka note]
+        3.source image hash string
+        4.data id[just serial number]
+
+Work Flow:
+    1. start the application
+    2. load all the hash strings to the bk-tree
+        when the application starts
+    3. now taka the user input and search from the tree
+    4. now we got - nearest matched hash string
+    5. if the matching satisfies a minimum percentage
+        then we run a query from the database to retrieve
+        all info of image with that hash string
+    6. show the infos
+    7. for enriching the database we can store the info of
+        the input image as well
