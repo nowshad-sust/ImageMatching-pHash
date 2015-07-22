@@ -29,7 +29,7 @@ public class JSONHandler {
 	String json = gson.toJson(obj);
  
 	try {
-            File file =new File(outputDestination);
+            File file = new File(outputDestination);
             if(!file.exists()){
                 System.out.println("File doesn't exist");
     		file.createNewFile();
@@ -42,7 +42,7 @@ public class JSONHandler {
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
- 
+        
 	System.out.println(json);
     }
     
