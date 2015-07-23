@@ -19,8 +19,8 @@ public class StoreHashToFile {
         ImagePHash obj = new ImagePHash();
         
         
-        InputStream image1 = new FileInputStream("./src/test/source.jpg");
-        InputStream image2 = new FileInputStream("./src/test/source.jpg");
+        InputStream image1 = new FileInputStream(".\\resources\\images\\source.jpg");
+        InputStream image2 = new FileInputStream(".\\resources\\images\\source.jpg");
         
         String hash1 = obj.getHash(image1);
         String hash2 = obj.getHash(image2);
