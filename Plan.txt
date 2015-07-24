@@ -28,7 +28,7 @@ details:
         2.source image value [which taka note]
         3.source image hash string
         4.data id[just serial number]
-
+        [using JSON currently instead]
 Work Flow:
     1. start the application
     2. load all the hash strings to the bk-tree
