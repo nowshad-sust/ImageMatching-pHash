@@ -23,7 +23,7 @@ public class FromJsonExample {
 		//convert the json string back to object
 		DataObject obj = gson.fromJson(br, DataObject.class);
  
-		System.out.println(obj.getData1());
+		System.out.println(obj.getData2());
  
 	} catch (IOException e) {
 		e.printStackTrace();

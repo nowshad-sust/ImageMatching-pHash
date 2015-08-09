@@ -13,7 +13,7 @@ public class DataObject {
 	private int data1 = 100;
 	private String data2 = "hello";
 	private List<String> list = new ArrayList<String>();
- 
+        
 
     public int getData1() {
         return data1;

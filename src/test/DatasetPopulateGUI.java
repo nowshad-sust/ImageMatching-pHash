@@ -45,7 +45,6 @@ public class DatasetPopulateGUI extends JFrame {
         FilePicker filePicker = new FilePicker("Pick a file", "Browse...");
         filePicker.setMode(FilePicker.MODE_SAVE);
         filePicker.addFileTypeFilter(".jpg", "JPEG Images");
-        filePicker.addFileTypeFilter(".png", "PNG images");
          
         // access JFileChooser class directly
         JFileChooser fileChooser = filePicker.getFileChooser();

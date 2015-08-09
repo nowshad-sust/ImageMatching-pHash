@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package test;
 
 import java.io.FileInputStream;
@@ -21,8 +22,8 @@ public class Testphash {
         ImagePHash obj = new ImagePHash();
         
         
-        InputStream image1 = new FileInputStream("./src/test/source.jpg");
-        InputStream image2 = new FileInputStream("./src/test/source.jpg");
+        InputStream image1 = new FileInputStream("./src/resources/images/1000.jpg");
+        InputStream image2 = new FileInputStream("./src/resources/images/1000.jpg");
         
         String hash1 = obj.getHash(image1);
         String hash2 = obj.getHash(image2);

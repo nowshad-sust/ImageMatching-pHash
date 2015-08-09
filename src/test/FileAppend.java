@@ -14,6 +14,7 @@ import java.io.PrintWriter;
  *
  * @author nowshad
  */
+
 public class FileAppend {
     public void appendFile(String textToAppend, String filePath){
         try {
@@ -23,5 +24,10 @@ public class FileAppend {
         } catch (IOException e) {
             //exception handling left as an exercise for the reader
         }
+    }
+    
+    public static void main(String args[]){
+        FileAppend fa = new FileAppend();
+        //fa.appendFile("","");
     }
 }
