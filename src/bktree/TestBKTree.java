@@ -34,7 +34,7 @@ public class TestBKTree {
 			bkTree.add(word);
 		}
 		
-		HashMap<String, Integer> queryMap = bkTree.query("bark", 2);
+		HashMap<String, Integer> queryMap = bkTree.query("book", 2);
 		System.out.println(queryMap);
 		
 		String searchTerm = "temotw";
