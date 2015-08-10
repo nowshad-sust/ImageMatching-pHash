@@ -18,16 +18,15 @@ import java.util.List;
 public class ToJSONFromArray {
     private List<DatasetObject> mainJsonArray = new ArrayList<DatasetObject>();
     
+    
     public void addObjectToArray(DatasetObject obj){
         mainJsonArray.add(obj);
-        System.out.println(obj.getImagePHashString());
-        System.out.println(obj.getSourceImagePath());
-        System.out.println(obj.getValueInTaka());
-        System.out.println("Object added. size = "+mainJsonArray.size());
+        System.out.println("Object added. size = " + mainJsonArray.size());
     }
+    
     public void writeJsonArray(String destinationFullPath){
         
-        ToJSONFromArray mainArrayObject = new ToJSONFromArray(); 
+        ToJSONFromArray mainArrayObject = this; 
         //printing the array first
         
         for(int i=0;i < mainJsonArray.size();i++){

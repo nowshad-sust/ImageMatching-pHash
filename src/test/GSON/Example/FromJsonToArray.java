@@ -28,7 +28,7 @@ public class FromJsonToArray {
 		//convert the json string back to object
 		ToJSONFromArray obj = gson.fromJson(br, ToJSONFromArray.class);
  
-		System.out.println(obj.getMainJsonArray().get(1).getImagePHashString());
+		System.out.println(obj.getMainJsonArray());
  
 	} catch (IOException e) {
 		e.printStackTrace();
