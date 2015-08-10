@@ -19,13 +19,13 @@ public class MainJSONObjectArray {
         DatasetObject DO1 = new DatasetObject();
         DO1.setImagePHashString("1000000");
         DO1.setSourceImagePath("nai");
-        DO1.setValueInTaka(100);
+        DO1.setValueInTaka("100");
         //2nd object
         
         DatasetObject DO2 = new DatasetObject();
         DO2.setImagePHashString("2000000");
         DO2.setSourceImagePath("ase");
-        DO2.setValueInTaka(200);
+        DO2.setValueInTaka("200");
         
         
         ToJSONFromArray objRef = new ToJSONFromArray();

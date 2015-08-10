@@ -10,15 +10,15 @@ package test.GSON.Example;
  * @author nowshad
  */
 public class DatasetObject {
-    private int valueInTaka;
+    private String valueInTaka;
     private String sourceImagePath;
     private String imagePHashString;
 
-    public int getValueInTaka() {
+    public String getValueInTaka() {
         return valueInTaka;
     }
 
-    public void setValueInTaka(int valueInTaka) {
+    public void setValueInTaka(String valueInTaka) {
         this.valueInTaka = valueInTaka;
     }
 

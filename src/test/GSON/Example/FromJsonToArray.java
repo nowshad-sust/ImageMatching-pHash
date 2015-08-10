@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 /**
  *
@@ -16,7 +17,8 @@ import java.io.IOException;
  */
 public class FromJsonToArray {
     
-    public void retrieveArrayfromJson(String sourcePath){
+    public List<DatasetObject> retrieveArrayfromJson(String sourcePath){
+        
         
         Gson gson = new Gson();
  
@@ -28,15 +30,12 @@ public class FromJsonToArray {
 		//convert the json string back to object
 		ToJSONFromArray obj = gson.fromJson(br, ToJSONFromArray.class);
  
-		System.out.println(obj.getMainJsonArray());
+                return obj.getMainJsonArray();
  
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
+        return null;
     }
     
-    public static void main(String args[]){
-        FromJsonToArray objRef = new FromJsonToArray();
-        objRef.retrieveArrayfromJson(".\\src\\resources\\dataset\\dataset.json");
-    }
 }
