@@ -1,5 +1,5 @@
 //simple GUI for the Matching program
-package test;
+package dataset;
 //importing requird libraries 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -55,7 +55,7 @@ public class FilePicker extends JPanel {
             }
         });
         
-        categoryLabel = new JLabel("Compare with: ");
+        categoryLabel = new JLabel("Value: ");
         
         //Dropdown category list
         String[] categories = { "1","2","5","10","20","50","100","500","1000" };
