@@ -121,8 +121,6 @@ public class SearchGUI extends JFrame {
         
         add(mainContainer);
         
-        
-        
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(750, 250);
         setResizable(false);
@@ -149,6 +147,7 @@ public class SearchGUI extends JFrame {
             }
             HashMap<String, Integer> queryMap = null;
             //now search through the bk-tree with that hash
+            //find the bst matches with the lowest possible threshold
             for(thresholdValue=0;queryMap == null;++thresholdValue){
                 System.out.println("serching with threshold: "+ thresholdValue);
                 queryMap = bkTree.query(imageHashString, thresholdValue);
@@ -156,6 +155,10 @@ public class SearchGUI extends JFrame {
                     queryMap = null;
                 //System.out.println(queryMap);
             }
+            
+            //also show the bestmathced result by function
+            System.out.println("best match "+bkTree.findBestWordMatchWithDistance(imageHashString));
+            
             String[] arr = null;
             double matchPercentage = 0;
             for ( String key : queryMap.keySet() ) {
@@ -174,9 +177,8 @@ public class SearchGUI extends JFrame {
                         );
             }
             
-            //match and keep track of each comparison
-            //use hashmap or array
-        //find the best result & show
+           
+        //show best result
         if(queryMap!=null){
             resultLabel.setText("<html>"
                 + "<h3>Result</h3><br>"

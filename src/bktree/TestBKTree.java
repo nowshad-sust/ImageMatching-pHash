@@ -34,9 +34,11 @@ public class TestBKTree {
 			bkTree.add(word);
 		}
 		
+                //running a search query with a threshold value
 		HashMap<String, Integer> queryMap = bkTree.query("book", 2);
 		System.out.println(queryMap);
 		
+                //running bestmatch search
 		String searchTerm = "temotw";
 		System.out.println("Best match for search '"+searchTerm+"' = "+bkTree.findBestWordMatchWithDistance(searchTerm));
 		
