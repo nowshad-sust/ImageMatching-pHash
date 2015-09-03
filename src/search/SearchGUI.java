@@ -8,6 +8,7 @@ package search;
 
 //importing required packages
 import bktree.BKTree;
+import crop.MoravecCustomized;
 import dataset.ImagePHash;
 import distance.LevenshteinDistance;
 import java.awt.BorderLayout;
@@ -65,6 +66,35 @@ public class SearchGUI extends JFrame {
         
         bottomPanel.setLayout(new FlowLayout());
         
+        
+        JButton cropButton = new JButton("Crop");
+        cropButton.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    Runnable searchImage = new Runnable(){
+                         public void run() {
+                            try{
+                                String source = FilePicker.textField.getText();
+                                String destination = ".\\src\\resources\\dataset\\tempImage.jpg";
+                                MoravecCustomized.ImageCrop(source, destination);
+                                FilePicker.textField.setText(destination);
+                            }catch(Exception e){
+                               
+                            }
+                            
+                            }
+		         };
+		 	(new Thread(searchImage)).start();
+                    
+                } catch(Exception ex){
+                    
+                }
+            }
+            
+        });
+        
         JButton searchButton = new JButton("Search");
         searchButton.addActionListener(new ActionListener() {
             @Override
@@ -112,6 +142,7 @@ public class SearchGUI extends JFrame {
         resultLabel.setText("Result Label");
         resultPanel.add(resultLabel);
         
+        bottomPanel.add(cropButton);
         bottomPanel.add(searchButton);
         
         //adding all components to mainPanel
