@@ -164,6 +164,7 @@ public class MoravecCustomized {
                 } catch (Exception e) {
                     
                 }
+                System.out.println("Image cropped");
         }
         
         private static BufferedImage cropImage(BufferedImage src,int x, int y, int width, int height) {
